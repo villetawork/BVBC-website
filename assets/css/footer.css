@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    background-color: #800000;
+    min-height: 50px;
+}
+
+
+/*------------------ Footer -------------------*/
+footer,
+.push {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #800000;
+    height: 46vh;
+}
+
+.ft_container {
+    display: flex;
+    padding: 2rem 0;
+    gap: 1rem;
+    width: 74%;
+    max-width: 2080px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.flogo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+}
+
+.flogo h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #dbdbdb;
+}
+
+.footer_description {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 20px;
+    margin-right: 3rem;
+    width: 450px;
+    max-height: 10px;
+}
+
+.footer_description .textwidget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    max-width: 50rem;
+    color: #fff;
+}
+
+.quick {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 270px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.contact ul li {
+    margin: 5px;
+    list-style-type: none;
+    color: #fff;
+}
+
+.quick ul li {
+    list-style-type: none;
+    margin: 7px;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+#footertxt {
+    color: #fff;
+}

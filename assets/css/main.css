@@ -1,0 +1,167 @@
+/*-------------------- Main --------------------*/
+main {
+    min-height: 300vh;
+    max-height: 100vh;
+    margin-bottom: -100px;
+}
+
+/* video */
+.intro {
+    position: relative;
+    min-height: 87vh;
+    overflow: hidden;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
+.video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 100%;
+    min-height: 10%;
+}
+
+/* transition */
+.custom-shape-divider-bottom-1750301863 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1750301863 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-bottom-1750301863 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1750324223 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1750324223 svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 12px;
+}
+
+.custom-shape-divider-top-1750324223 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* slider */
+.slider {
+    min-width: 1000px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.fade img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.count {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 50px;
+    margin-top: -22px;
+    color: #666666;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #dbdbdb;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #29292963;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #fde676d3;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    line-height: 300px;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.count {
+    text-align: center;
+    top: 500px;
+}
