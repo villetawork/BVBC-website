@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -110,6 +111,19 @@
             <video muted loop autoplay class="video">
                 <source src="assets/video/intro/Intro1.mp4" type="video/mp4" />
             </video>
+            <div class="overlay"></div>
+            <div class="introtxt">
+                <div class="welcome">
+                    <h3>Welcome To</h3>
+                    <h1>BVBC</h1>
+                </div>
+                <p>Baptist Voice Bible College, is a private school that offers foundational and higher education. It
+                    has been operated and managed by Grace Baptist Church since 2000. The Basic Education Department
+                    utilizes the Accelerated Christian Education system that was started in the early 1970s by dedicated
+                    parents who desired their children reared under the teaching of God’s word – the Bible. A.C.E.
+                    penetrated over 130 countries, where parents desire their children’s lives patterned after the
+                    timeless principles of God’s Word.</p>
+            </div>
             <div class="custom-shape-divider-bottom-1750301863">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                     preserveAspectRatio="none">
@@ -182,22 +196,23 @@
         </div>
 
         <div class="explore">
-            <h1>EXPLORE OUR ACADEMIC PROGRAMS</h1>
-            <p>BVBC offers a diverse range of academic programs designed to equip students with the knowledge, skills,
-                and values needed to succeed in today’s competitive world.</p>
-            <div class="">
-                <img src="assets/img/unsorted/bbvbcws.JPG" alt="" width="600px">
-                <h2>UNDERGRADUATE PROGRAMS</h2>
-                <p>Discover a multitude of bachelor’s degree programs that offer limitless potential for launching your
-                    career.</p>
-                <a href="">View Programs</a>
+
+            <img src="assets/img/unsorted/bbvbcws.JPG" data-modal="modal1" class="openModal" style="clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);">
+            <img src="assets/img/unsorted/PPHSICLL.jpg" data-modal="modal2" class="openModal" style="clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);">
+
+            <div class="modal" id="modal1">
+                <div class="modal-content">
+                    <img src="assets/img/unsorted/bbvbcws.JPG" alt="" width="100%">
+                    <h1></h1>
+                    <p></p>
+                </div>
             </div>
-            <div class="">
-                <img src="assets/img/" alt="">
-                <h2>RR-JUNIOR HI-SCHOOL</h2>
-                <p>Begin your child’s educational journey with our exceptional preschool and basic education curriculum.
-                </p>
-                <a href="">View Programs</a>
+            <div class="modal" id="modal2">
+                <div class="modal-content">
+                    <img src="assets/img/unsorted/PPHSICLL.jpg" alt="" width="100%">
+                    <h1></h1>
+                    <p></p>
+                </div>
             </div>
         </div>
         <div class="push"></div>
@@ -262,6 +277,7 @@
         </div>
     </footer>
     <script src="assets/js/sliders.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

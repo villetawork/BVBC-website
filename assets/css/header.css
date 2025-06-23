@@ -14,10 +14,10 @@
 .title h1 {
     color: #dbdbdb;
     font-size: 79px;
-    font-weight: 400;  
-    font-family: "Arapey", serif;
-    font-weight: 544;
+    font-weight: 500;  
+    font-family: "Ancizar Sans", sans-serif;
     font-style: normal;
+    text-shadow: 2px 3px 4px rgba(0,0,0,1);
 }
 
 .nav-right {
@@ -66,8 +66,8 @@
 .whitebox {
     background-color: #ffffff;
     height: 100%;
-    width: 25rem;
-    right: 0;
+    width: 17rem;
+    margin-left: 70px;
     display: flex;
     justify-content: center;
     align-items: center;

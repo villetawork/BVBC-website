@@ -8,7 +8,7 @@ main {
 /* video */
 .intro {
     position: relative;
-    min-height: 87vh;
+    min-height: 82vh;
     overflow: hidden;
     margin-bottom: 5px;
     max-width: 100%;
@@ -16,11 +16,47 @@ main {
 
 .video {
     position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    top: -170px;
     max-width: 100%;
-    min-height: 10%;
+    width: 100%;
+}
+
+.introtxt {
+    position: absolute;
+    right: 150px;
+    top: 10%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome {
+    margin: auto;
+}
+
+.introtxt h3 {
+    text-align: left;
+    font-size: 30px;
+    margin-left: 10px;
+    color: #ffffffde;
+    text-shadow: 0 6px 10px black;
+}
+
+.introtxt h1 {
+    font-size: 210px;
+    text-align: left;
+    color: #ffffffde;
+    text-shadow: 2px 3px 7px black;
+    line-height: 160px;
+    margin-bottom: 40px;
+}
+
+.introtxt p {
+    font-size: 19px;
+    color: #ffffffde;
+    text-shadow: 0 6px 10px black;
+    text-align: justify;
 }
 
 /* transition */
@@ -164,4 +200,36 @@ main {
 .count {
     text-align: center;
     top: 500px;
+}
+
+.explore {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  margin: 2% auto;
+  padding: 0;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.openModal {
+    position: absolute;
+    width: 60%;
+    cursor: pointer;
 }
