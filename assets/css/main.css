@@ -1,34 +1,33 @@
 /*-------------------- Main --------------------*/
 main {
-    min-height: 300vh;
-    max-height: 100vh;
     margin-bottom: -100px;
+    min-height: 370vh;
 }
 
 /* video */
 .intro {
-    position: relative;
-    min-height: 82vh;
-    overflow: hidden;
     margin-bottom: 5px;
     max-width: 100%;
+    min-height: 82vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .video {
+    max-width: 100%;
     position: absolute;
     top: -170px;
-    max-width: 100%;
     width: 100%;
 }
 
 .introtxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     right: 150px;
     top: 10%;
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .welcome {
@@ -36,44 +35,46 @@ main {
 }
 
 .introtxt h3 {
-    text-align: left;
-    font-size: 30px;
-    margin-left: 10px;
     color: #ffffffde;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: left;
     text-shadow: 0 6px 10px black;
 }
 
 .introtxt h1 {
-    font-size: 210px;
+    color: #850c0cf1;
+    font-size: 140px;
+    line-height: 105px;
+    margin-bottom: 20px;
     text-align: left;
-    color: #ffffffde;
-    text-shadow: 2px 3px 7px black;
-    line-height: 160px;
-    margin-bottom: 40px;
+    text-shadow: 2px 8px 10px rgba(255, 255, 255, 0.055), 0px -5px 35px rgba(201, 22, 22, 0.384);
+
 }
 
 .introtxt p {
-    font-size: 19px;
     color: #ffffffde;
-    text-shadow: 0 6px 10px black;
+    font-size: 15px;
     text-align: justify;
+    margin-left: 15px;
+    text-shadow: 0 6px 10px black;
 }
 
 /* transition */
 .custom-shape-divider-bottom-1750301863 {
-    position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    overflow: hidden;
     line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
 }
 
 .custom-shape-divider-bottom-1750301863 svg {
-    position: relative;
     display: block;
-    width: calc(150% + 1.3px);
     height: 50px;
+    position: relative;
+    width: calc(150% + 1.3px);
 }
 
 .custom-shape-divider-bottom-1750301863 .shape-fill {
@@ -81,20 +82,20 @@ main {
 }
 
 .custom-shape-divider-top-1750324223 {
+    left: 0;
+    line-height: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
     transform: rotate(180deg);
+    width: 100%;
 }
 
 .custom-shape-divider-top-1750324223 svg {
-    position: relative;
     display: block;
-    width: calc(135% + 1.3px);
     height: 12px;
+    position: relative;
+    width: calc(135% + 1.3px);
 }
 
 .custom-shape-divider-top-1750324223 .shape-fill {
@@ -103,45 +104,45 @@ main {
 
 /* slider */
 .slider {
-    min-width: 1000px;
-    position: relative;
     margin: auto;
+    min-width: 1000px;
     overflow: hidden;
+    position: relative;
 }
 
 .fade img {
-    vertical-align: middle;
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
+    vertical-align: middle;
 }
 
 .count {
-    position: absolute;
     bottom: 15px;
-    width: 100%;
+    position: absolute;
     text-align: center;
+    width: 100%;
 }
 
 .prev,
 .next {
+    border-radius: 0 3px 3px 0;
+    color: #666666;
     cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -22px;
+    padding: 50px;
     position: absolute;
     top: 40%;
-    width: auto;
-    padding: 50px;
-    margin-top: -22px;
-    color: #666666;
-    font-weight: bold;
-    font-size: 30px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    width: auto;
 }
 
 .next {
-    right: 0;
     border-radius: 3px 0 0 3px;
+    right: 0;
 }
 
 .prev:hover,
@@ -151,14 +152,14 @@ main {
 }
 
 .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 4px;
     background-color: #29292963;
     border-radius: 50%;
+    cursor: pointer;
     display: inline-block;
+    height: 15px;
+    margin: 0 4px;
     transition: background-color 0.6s ease;
+    width: 15px;
 }
 
 .active,
@@ -167,14 +168,14 @@ main {
 }
 
 .fade {
-    -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5;
-    animation-name: fade;
+    -webkit-animation-name: fade;
     animation-duration: 1.5s;
+    animation-name: fade;
+    display: none;
+    left: 0;
     line-height: 300px;
     top: 0;
-    left: 0;
-    display: none;
 }
 
 @-webkit-keyframes fade {
@@ -202,34 +203,110 @@ main {
     top: 500px;
 }
 
+/* explore our acad */
 .explore {
     display: flex;
-    position: relative;
     justify-content: center;
-    margin: 20px;
+    align-items: center;
+    background-color: #800000;
+    overflow: hidden;
+    height: 120vh;
+}
+
+.WrapperExplore {
+    display: flex;
+    justify-content: center;
+}
+
+.Eimg {
+    width: 100rem;
+    /* You can adjust width */
+    height: 450px;
+    overflow: hidden;
+}
+
+.ExploreLeft {
+    clip-path: polygon(0 0, 93% 0, 73% 100%, 0 100%);
+}
+
+.ExploreRight {
+    clip-path: polygon(28% 0, 100% 0, 100% 100%, 8% 100%);
+    margin-left: -550px;
+    /* gap between the 2 img (idk it just work no idea for other solution) */
+}
+
+.ExploreLeft img,
+.ExploreRight img {
+    object-position: 50% 35%;
+    transform: translateX(-10px);
+    /* or scale(1.1), etc. */
+    ;
+}
+
+.Eimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 1s;
+}
+
+.Eimg:hover img {
+    transform: scale(1.1);
 }
 
 .modal {
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    position: fixed;
-    z-index: 1000;
+    height: 100%;
     left: 0;
+    overflow: auto;
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
 }
 
 .modal-content {
-  margin: 2% auto;
-  padding: 0;
-  border-radius: 20px;
-  width: 70%;
+    border-radius: 20px;
+    margin: 2% auto;
+    padding: 0;
+    width: 70%;
 }
 
 .openModal {
-    position: absolute;
-    width: 60%;
     cursor: pointer;
+}
+
+/* News and Events */
+.events {
+    width: 100%;
+    height: 90vh;
+    
+}
+
+.imgcontainer {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.NEImages {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.NEImages.active {
+    display: block;
+}
+
+
+.NEImages img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

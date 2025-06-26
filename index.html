@@ -15,15 +15,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+<!-- <div class="wrapper"> -->
     <header>
         <nav id="navbar-scroll">
             <div class="navbar-content">
                 <div class="nav-logo">
-                    <img src="assets/img/logo/Logo2.png" alt="" width="162px">
+                    <img src="assets/img/logo/Logo2.png" alt="" width="132px">
                 </div>
                 <div class="nav-center">
                     <div class="title">
@@ -42,13 +44,13 @@
                         <div class="dropdown">
                             <a href="">BasicEd</a>
                             <div class="hover-items">
-                                <a href="">Student Handbook</a>
                                 <a href="">Curriculum</a>
                                 <a href="">Overview</a>
                                 <a href="">Admission & Requirements</a>
                                 <a href="">Facculty & Staff</a>
                                 <a href="">School Calendar</a>
                                 <a href="">Student Life</a>
+                                <a href="">Student Handbook</a>
                             </div>
                         </div>
                         <div class="dropdown">
@@ -133,8 +135,6 @@
                 </svg>
             </div>
         </div>
-
-
         <div class="slider">
             <ul class="slides">
                 <li class="fade">
@@ -146,7 +146,7 @@
                                 class="shape-fill"></path>
                         </svg>
                     </div>
-                    <img src="assets/img/slider/1.png">
+                    <img src="assets/img/Home/slider/1.png">
                 </li>
                 <li class="fade">
                     <div class="custom-shape-divider-top-1750324223">
@@ -157,7 +157,7 @@
                                 class="shape-fill"></path>
                         </svg>
                     </div>
-                    <img src="assets/img/slider/3.png">
+                    <img src="assets/img/Home/slider/3.png">
                 </li>
                 <li class="fade">
                     <div class="custom-shape-divider-top-1750324223">
@@ -168,18 +168,18 @@
                                 class="shape-fill"></path>
                         </svg>
                     </div>
-                    <img src="assets/img/slider/4.png">
+                    <img src="assets/img/Home/slider/4.png">
                 </li>
-                <li class="fade">
+                <li class="fade"> <!-- ----------------------| -->
                     <div class="custom-shape-divider-top-1750324223">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                             preserveAspectRatio="none">
                             <path
                                 d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
                                 class="shape-fill"></path>
-                        </svg>
-                    </div> <!-- ----------------------| -->
-                    <img src="assets/img/slider/6.png"> <!-- | duplicate this when adding new slides -->
+                            </svg>
+                        </div> 
+                    <img src="assets/img/Home/slider/6.png"> <!-- | duplicate this when adding new slides -->
                 </li> <!-- ----------------------------------|-->
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -194,25 +194,77 @@
                 <!-- dont forget to change the number inside "currentSlide()"-->
             </div>
         </div>
-
         <div class="explore">
-
-            <img src="assets/img/unsorted/bbvbcws.JPG" data-modal="modal1" class="openModal" style="clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);">
-            <img src="assets/img/unsorted/PPHSICLL.jpg" data-modal="modal2" class="openModal" style="clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);">
-
+            <div class="bgExplore">
+                <h1>EXPLORE OUR ACADEMIC PROGRAMS</h1>
+                <p>BVBC offers a diverse range of academic programs designed to equip students with the knowledge, skills, and values needed to succeed in today's competitive world.</p>
+            </div>
+            <div class="WrapperExplore">
+                <div class="Eimg ExploreLeft">
+                    <img src="assets/img/Home/unsorted/bbvbcws.JPG" data-modal="modal1" class="openModal">
+                </div>
+                <div class="Eimg ExploreRight">
+                    <img src="assets/img/Home/unsorted/PPHSICLL.jpg" data-modal="modal2" class="openModal">
+                </div>
+            </div>
             <div class="modal" id="modal1">
                 <div class="modal-content">
-                    <img src="assets/img/unsorted/bbvbcws.JPG" alt="" width="100%">
-                    <h1></h1>
-                    <p></p>
+                    <img src="assets/img/Home/unsorted/bbvbcws.JPG" alt="" width="100%">
+                    <h1>UNDERGRADUATE PROGRAMS</h1>
+                    <p>Discover a multitude of bachelor’s degree programs that offer limitless potential for launching
+                        your career.</p>
                 </div>
             </div>
             <div class="modal" id="modal2">
                 <div class="modal-content">
-                    <img src="assets/img/unsorted/PPHSICLL.jpg" alt="" width="100%">
-                    <h1></h1>
-                    <p></p>
+                    <img src="assets/img/Home/unsorted/PPHSICLL.jpg" alt="" width="100%">
+                    <h1>RR-JUNIOR HI-SCHOOL</h1>
+                    <p>Begin your child’s educational journey with our exceptional preschool and basic education
+                        curriculum.</p>
                 </div>
+            </div>
+        </div>
+        <div class="events">
+            <h1>News & Events</h1>
+            <div class="NEsliders">
+                <ul class="NEslides">
+                    <li class="NESlideImg">
+                        <div class="textbox">20th Commencement Excercises</div>
+                        <ul class="imgcontainer">
+                            <li class="NEImages"><img src="assets/img/Home/20thComEx/1.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/20thComEx/2.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/20thComEx/3.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/20thComEx/4.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/20thComEx/5.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/20thComEx/6.JPG" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="NESlideImg">
+                        <div class="textbox">College Fieldtrip</div>
+                        <ul class="imgcontainer">
+                            <li class="NEImages"><img src="assets/img/Home/CollegeFieldtrip/1.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/CollegeFieldtrip/2.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/CollegeFieldtrip/3.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/CollegeFieldtrip/4.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/CollegeFieldtrip/5.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/CollegeFieldtrip/6.JPG" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="NESlideImg">
+                        <div class="textbox">Morning Devotion</div>
+                        <ul class="imgcontainer">
+                            <li class="NEImages"><img src="assets/img/Home/MorningDev/1.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/MorningDev/2.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/MorningDev/3.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/MorningDev/4.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/MorningDev/5.JPG" alt=""></li>
+                            <li class="NEImages"><img src="assets/img/Home/MorningDev/6.JPG" alt=""></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <a class="prev" onclick="prevSlides()">&#10094;</a>
+                <a class="next" onclick="nextSlides()">&#10095;</a>
             </div>
         </div>
         <div class="push"></div>
@@ -276,6 +328,7 @@
             </div>
         </div>
     </footer>
+<!-- </div> -->
     <script src="assets/js/sliders.js"></script>
     <script src="assets/js/modal.js"></script>
 </body>

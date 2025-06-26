@@ -1,28 +1,26 @@
+// --- FIRST SLIDER (Keep existing) ---
 let slideIndex = 0;
 let timeoutId = null;
+
 const slides = document.getElementsByClassName("fade");
 const dots = document.getElementsByClassName("dot");
 
 function showSlides() {
-    // Hide all slides and deactivate all dots
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         dots[i].classList.remove('active');
     }
 
-    // Wrap around if index goes out of bounds
     if (slideIndex >= slides.length) slideIndex = 0;
     if (slideIndex < 0) slideIndex = slides.length - 1;
 
-    // Show the current slide and set the active dot
     slides[slideIndex].style.display = "block";
     dots[slideIndex].classList.add('active');
 
-    // Schedule next slide
     timeoutId = setTimeout(() => {
         slideIndex++;
         showSlides();
-    }, 5000); // 5 seconds
+    }, 5000);
 }
 
 function currentSlide(index) {
@@ -35,11 +33,72 @@ function plusSlides(step) {
     restartSlideshow();
 }
 
-// Restart timer when manually navigating
 function restartSlideshow() {
-    clearTimeout(timeoutId); // stop old timer
-    showSlides();            // show new slide and start new timer
+    clearTimeout(timeoutId);
+    showSlides();
 }
 
-// Start slideshow on page load
-window.onload = showSlides;
+// --- Start first slider ---
+window.onload = function () {
+    showSlides();
+    showSlides2(slideIndex2); // Also start second slider
+};
+
+
+// --- SECOND SLIDER (Outer with Inner) ---
+let slideIndex2 = 0;
+let innerIndex = 0;
+let timeoutInner = null;
+let timeoutOuter = null;
+
+const NEslides = document.querySelectorAll('.NESlideImg');
+
+function showSlides2(index) {
+    clearTimeout(timeoutInner);
+    clearTimeout(timeoutOuter);
+
+    NEslides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+
+    slideIndex2 = index;
+    const currentSlide = NEslides[slideIndex2];
+    currentSlide.style.display = 'block';
+
+    const innerImages = currentSlide.querySelectorAll('.imgcontainer .NEImages img');
+    innerIndex = 0;
+
+    function showNextInnerImage() {
+        innerImages.forEach(img => {
+            img.parentElement.classList.remove('active');
+        });
+
+        innerImages[innerIndex].parentElement.classList.add('active');
+
+        innerIndex++;
+
+        if (innerIndex < innerImages.length) {
+            timeoutInner = setTimeout(showNextInnerImage, 3000);
+        } else {
+            timeoutOuter = setTimeout(() => {
+                nextSlides(); // or however you're advancing
+            }, 3000);
+        }
+    }
+
+    showNextInnerImage();
+}
+
+function prevSlides() {
+    clearTimeout(timeoutInner);
+    clearTimeout(timeoutOuter);
+    slideIndex2 = (slideIndex2 - 1 + NEslides.length) % NEslides.length;
+    showSlides2(slideIndex2);
+}
+
+function nextSlides() {
+    clearTimeout(timeoutInner);
+    clearTimeout(timeoutOuter);
+    slideIndex2 = (slideIndex2 + 1) % NEslides.length;
+    showSlides2(slideIndex2);
+}
