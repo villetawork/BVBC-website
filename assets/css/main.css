@@ -1,10 +1,20 @@
-/*-------------------- Main --------------------*/
-main {
-    margin-bottom: -100px;
-    min-height: 370vh;
+/*-------------------- CSS Variables --------------------*/
+:root {
+    --primary-color: #800000;
+    --secondary-color: #dbdbdb;
+    --accent-color: #850c0cf1;
+    --highlight-color: #fde676d3;
+    --text-white: #ffffffde;
+    --shadow-dark: 0 6px 10px black;
+    --shadow-light: 2px 8px 10px rgba(255, 255, 255, 0.055), 0px -5px 35px rgba(201, 22, 22, 0.384);
 }
 
-/* video */
+/*-------------------- Main Layout --------------------*/
+main {
+    min-height: 100vh;
+}
+
+/*-------------------- Intro Section --------------------*/
 .intro {
     margin-bottom: 5px;
     max-width: 100%;
@@ -14,10 +24,20 @@ main {
 }
 
 .video {
-    max-width: 100%;
     position: absolute;
     top: -170px;
     width: 100%;
+    max-width: 100%;
+}
+
+.intro .overlay {
+    background-image: linear-gradient(345deg, rgba(128, 0, 0, 1) 0%, rgba(128, 0, 0, 0.05) 59%);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none; /* Allows clicks to pass through */
 }
 
 .introtxt {
@@ -35,74 +55,69 @@ main {
 }
 
 .introtxt h3 {
-    color: #ffffffde;
+    color: var(--text-white);
     font-size: 20px;
     margin-left: 10px;
     text-align: left;
-    text-shadow: 0 6px 10px black;
+    text-shadow: var(--shadow-dark);
 }
 
 .introtxt h1 {
-    color: #850c0cf1;
+    color: var(--accent-color);
     font-size: 140px;
     line-height: 105px;
     margin-bottom: 20px;
     text-align: left;
-    text-shadow: 2px 8px 10px rgba(255, 255, 255, 0.055), 0px -5px 35px rgba(201, 22, 22, 0.384);
-
+    text-shadow: var(--shadow-light);
 }
 
 .introtxt p {
-    color: #ffffffde;
+    color: var(--text-white);
     font-size: 15px;
     text-align: justify;
     margin-left: 15px;
-    text-shadow: 0 6px 10px black;
+    text-shadow: var(--shadow-dark);
 }
 
-/* transition */
-.custom-shape-divider-bottom-1750301863 {
-    bottom: 0;
-    left: 0;
-    line-height: 0;
-    overflow: hidden;
+/*-------------------- SVG Transitions --------------------*/
+.custom-shape-divider-bottom-1750301863,
+.custom-shape-divider-top-1750324223 {
     position: absolute;
     width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.custom-shape-divider-bottom-1750301863 {
+    bottom: 0;
 }
 
 .custom-shape-divider-bottom-1750301863 svg {
     display: block;
-    height: 50px;
-    position: relative;
     width: calc(150% + 1.3px);
+    height: 50px;
 }
 
 .custom-shape-divider-bottom-1750301863 .shape-fill {
-    fill: #FFFFFF;
+    fill: #ffffff;
 }
 
 .custom-shape-divider-top-1750324223 {
-    left: 0;
-    line-height: 0;
-    overflow: hidden;
-    position: absolute;
     top: 0;
     transform: rotate(180deg);
-    width: 100%;
 }
 
 .custom-shape-divider-top-1750324223 svg {
     display: block;
-    height: 12px;
-    position: relative;
     width: calc(135% + 1.3px);
+    height: 12px;
 }
 
 .custom-shape-divider-top-1750324223 .shape-fill {
-    fill: #FFFFFF;
+    fill: #ffffff;
 }
 
-/* slider */
+/*-------------------- Slider --------------------*/
 .slider {
     margin: auto;
     min-width: 1000px;
@@ -118,26 +133,28 @@ main {
 }
 
 .count {
-    bottom: 15px;
     position: absolute;
-    text-align: center;
+    bottom: 15px;
     width: 100%;
+    text-align: center;
 }
 
 .prev,
 .next {
-    border-radius: 0 3px 3px 0;
-    color: #666666;
-    cursor: pointer;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: -22px;
-    padding: 50px;
     position: absolute;
     top: 40%;
-    transition: 0.6s ease;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
     user-select: none;
-    width: auto;
+    transition: 0.6s ease;
+    color: #666;
+}
+
+.prev {
+    border-radius: 0 3px 3px 0;
+    left: 0;
 }
 
 .next {
@@ -148,67 +165,46 @@ main {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    color: #dbdbdb;
+    color: var(--secondary-color);
 }
 
 .dot {
-    background-color: #29292963;
-    border-radius: 50%;
-    cursor: pointer;
-    display: inline-block;
     height: 15px;
-    margin: 0 4px;
-    transition: background-color 0.6s ease;
     width: 15px;
+    margin: 0 4px;
+    background-color: rgba(41, 41, 41, 0.39);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
-    background-color: #fde676d3;
+    background-color: var(--highlight-color);
 }
 
 .fade {
-    -webkit-animation-duration: 1.5;
-    -webkit-animation-name: fade;
-    animation-duration: 1.5s;
-    animation-name: fade;
     display: none;
-    left: 0;
     line-height: 300px;
-    top: 0;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-
-    to {
-        opacity: 1;
-    }
+    animation: fade 1.5s;
 }
 
 @keyframes fade {
     from {
         opacity: 0.4;
     }
-
     to {
         opacity: 1;
     }
 }
 
-.count {
-    text-align: center;
-    top: 500px;
-}
-
-/* explore our acad */
+/*-------------------- Explore Section --------------------*/
 .explore {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #800000;
+    background-color: var(--primary-color);
     overflow: hidden;
     height: 120vh;
 }
@@ -220,27 +216,23 @@ main {
 
 .Eimg {
     width: 100rem;
-    /* You can adjust width */
     height: 450px;
     overflow: hidden;
 }
 
 .ExploreLeft {
-    clip-path: polygon(0 0, 93% 0, 73% 100%, 0 100%);
+    clip-path: polygon(0 0, 83% 0, 63% 100%, 0 100%);
 }
 
 .ExploreRight {
     clip-path: polygon(28% 0, 100% 0, 100% 100%, 8% 100%);
-    margin-left: -550px;
-    /* gap between the 2 img (idk it just work no idea for other solution) */
+    margin-left: -700px; /* Adjust as needed */
 }
 
 .ExploreLeft img,
 .ExploreRight img {
     object-position: 50% 35%;
     transform: translateX(-10px);
-    /* or scale(1.1), etc. */
-    ;
 }
 
 .Eimg img {
@@ -255,47 +247,48 @@ main {
     transform: scale(1.1);
 }
 
+/*-------------------- Modal --------------------*/
 .modal {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     height: 100%;
-    left: 0;
-    overflow: auto;
+    width: 100%;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    overflow: auto;
     z-index: 1000;
 }
 
 .modal-content {
-    border-radius: 20px;
     margin: 2% auto;
     padding: 0;
     width: 70%;
+    border-radius: 20px;
 }
 
 .openModal {
     cursor: pointer;
 }
 
-/* News and Events */
+/*-------------------- News and Events --------------------*/
 .events {
     width: 100%;
     height: 90vh;
-    
+}
+
+.NESlideImg {
+    position: relative;
+    height: 500px;
 }
 
 .imgcontainer {
-    position: relative;
-    height: 300px;
-    width: 100%;
     overflow: hidden;
-    
+    width: 100%;
+    height: 100%;
 }
 
 .NEImages {
-    width: 100%;
-    height: 100%;
     display: none;
 }
 
@@ -303,10 +296,21 @@ main {
     display: block;
 }
 
-
-.NEImages img{
-    position: absolute;
+.NEImages img {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 1;
+}
+
+.events .overlay {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 79%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(var(--secondary-color), 0.7) 80%, rgba(var(--secondary-color), 0) 0%);
+    /* z-index: 2; */
+    /* pointer-events: none; */
 }
