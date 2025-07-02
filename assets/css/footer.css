@@ -18,7 +18,7 @@ footer {
     gap: 1rem;
     margin-top: 50px;
     margin: auto;
-    max-width: 2080px;
+    max-width: 100%;
     justify-content: center;
     padding: 2rem 0;
     flex-wrap: wrap;
