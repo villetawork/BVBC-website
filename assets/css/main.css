@@ -15,13 +15,19 @@ main {
 
 .video {
     position: absolute;
-    top: -170px;
+    top: 50%;
+    left: 50%;
     width: 100%;
-    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
 }
 
 .intro .overlay {
-    background-image: linear-gradient(345deg, rgba(128, 0, 0, 0.5) 0%, rgba(128, 0, 0, 0.05) 59%);
+    background-image: linear-gradient(29deg, rgba(var(--primary-color), 0.5) 0%, rgba(128, 0, 0, 0.05) 59%);
     height: 100%;
     position: absolute;
     top: 0;
@@ -30,14 +36,25 @@ main {
     pointer-events: none; /* Allows clicks to pass through */
 }
 
+.intro .overlay2 {
+    background-image: linear-gradient(90deg, rgba(var(--dark-color), 0.5) 0%, rgba(128, 0, 0, 0.05) 59%);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
 .introtxt {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    left: 150px;
-    top: 10%;
-    width: 30%;
+    left: 10%;
+    top: 50%;
+    width:22%;
+    transform: translateY(-60%);
 }
 
 .introtxt h3 {
@@ -45,16 +62,17 @@ main {
     font-size: 20px;
     margin-left: 10px;
     text-align: left;
+    font-family: "Poppins", sans-serif;
+    line-height: 40px;
     text-shadow: var(--shadow-dark);
 }
 
 .introtxt h1 {
-    color: var(--accent-color);
+    color: var(--text-white);
     font-size: 140px;
     line-height: 105px;
     margin-bottom: 20px;
     text-align: left;
-    text-shadow: var(--shadow-light);
 }
 
 .introtxt p {
@@ -62,7 +80,15 @@ main {
     font-size: 15px;
     text-align: justify;
     margin-left: 2%;
+    font-family: "Poppins", sans-serif;
     text-shadow: var(--shadow-dark);
+}
+
+.introtxt .button a {
+    background-color: rgba(var(--primary-color));
+    padding: 6%;
+    margin: 30px;
+    line-height: 90px;
 }
 
 /*-------------------- SVG Transitions --------------------*/
@@ -192,7 +218,7 @@ main {
     align-items: center;
     background-color: rgba(var(--primary-color));
     overflow: hidden;
-    height: 120vh;
+    height: 100vh;
 }
 
 .WrapperExplore {
@@ -255,48 +281,4 @@ main {
 
 .openModal {
     cursor: pointer;
-}
-
-/*-------------------- News and Events --------------------*/
-.events {
-    width: 100%;
-    height: 90vh;
-}
-
-.NESlideImg {
-    position: relative;
-    height: 500px;
-}
-
-.imgcontainer {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-.NEImages {
-    display: none;
-}
-
-.NEImages.active {
-    display: block;
-}
-
-.NEImages img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.events .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 79%;
-    height: 100%;
-    background-image: linear-gradient(to right, rgba(var(--secondary-color), 0.7) 80%, rgba(var(--secondary-color), 0) 0%);
-    z-index: 5;
-    pointer-events: none;
 }

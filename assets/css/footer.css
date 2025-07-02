@@ -5,11 +5,12 @@ footer,
     align-items: center;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 footer {
-    background-color: #800000;
-    height: 56rem;
+    background-color: rgba(var(--primary-color));
+    height: 100vh;
 }
 
 .ft_container {
@@ -20,7 +21,8 @@ footer {
     max-width: 2080px;
     justify-content: center;
     padding: 2rem 0;
-    width: 74%;
+    flex-wrap: wrap;
+    min-height: 100vh;
 }
 
 .flogo {
