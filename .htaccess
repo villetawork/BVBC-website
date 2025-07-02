@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteCond %{basic-ed}.html -f
-RewriteRule ^(.*)$ $basic-ed.html [L]
