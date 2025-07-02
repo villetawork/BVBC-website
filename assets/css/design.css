@@ -14,7 +14,12 @@ body {
 :root {
     --primary-color: 128, 0, 0;
     --secondary-color: 219, 219, 219;
-    --text-color: #000000;
+    --text-color: #000000;    
+    --accent-color: #850c0cf1;
+    --highlight-color: #fde676d3;
+    --text-white: #ffffffde;
+    --shadow-dark: 0 6px 10px black;
+    --shadow-light: 2px 8px 10px rgba(255, 255, 255, 0.055), 0px -5px 35px rgba(201, 22, 22, 0.384);
 }
 
 /*-------------------- Social Media Icons --------------------*/
@@ -33,7 +38,6 @@ body {
 }
 
 .fa-facebook {
-    background: #3b5998;
     color: white;
     border-radius: 50%;
 }
@@ -42,7 +46,6 @@ body {
 footer {
     background-color: var(--footer-background);
     padding: 20px;
-    text-align: center;
     color: var(--footer-text);
 }
 
