@@ -1,98 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="assets/css/design.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arimo" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+<script>
+    fetch('/assets/head.html')
+        .then(response => response.text())
+        .then(data => document.head.innerHTML = data);
+</script>
 
 <body>
-    <header>
-        <nav id="navbar-scroll">
-            <div class="navbar-content">
-                <div class="nav-logo">
-                    <img src="assets/img/logo/Logo2.png" alt="" width="132px">
-                </div>
-                <div class="nav-center">
-                    <div class="title">
-                        <h1>BAPTIST VOICE BIBLE COLLEGE</h1>
-                    </div>
-                    <div class="anav">
-
-                        <div class="dropdown">
-                            <a href="">Home</a>
-                            <div class="hover-items">
-                                <a href="">Discover Our Campus</a>
-                                <a href="">Explore Our Academic</a>
-                                <a href="">News & Events</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="BasicEd/basic-ed.html">BasicEd</a>
-                            <div class="hover-items">
-                                <a href="BasicEd/Curriculum/curriculum.html">Curriculum</a>
-                                <a href="BasicEd/Overview/overview.html">Overview</a>
-                                <a href="BasicEd/Admission/admission.html">Admission & Requirements</a>
-                                <a href="BasicEd/Faculty/faculty.html">Faculty & Staff</a>
-                                <a href="BasicEd/Calendar/calendar.html">School Calendar</a>
-                                <a href="BasicEd/StudentLife/student-life.html">Student Life</a>
-                                <a href="BasicEd/Handbook/handbook.html">Student Handbook</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="">College Department</a>
-                            <div class="hover-items">
-                                <a href="">Overview</a>
-                                <a href="">Program Offered</a>
-                                <a href="">Curriculum</a>
-                                <a href="">Admission & Requirements</a>
-                                <a href="">Student Handbook</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="">Academic Programs</a>
-                            <div class="hover-items">
-                                <a href="">Academic Calendar</a>
-                                <a href="">College News</a>
-                                <a href="">Upcoming Events</a>
-                                <a href="">Chapel Services</a>
-                                <a href="">Alumni News</a>
-                                <a href="">Student Life Events</a>
-                                <a href="">Annual Conferences & Events</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="">About Us</a>
-                            <div class="hover-items">
-                                <a href="">History</a>
-                                <a href="">Board & Trustees</a>
-                                <a href="">Vision Mission</a>
-                                <a href="">Message of the President</a>
-                                <a href="">Leadership & Administration</a>
-                                <a href="">Accreditation & Recognitions</a>
-                                <a href="">Hymn</a>
-                                <a href="">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+    <div id="navigation"></div>
     <!-- main -->
     <main>
         <div class="intro">
@@ -107,13 +22,9 @@
                     <h1>BVBC</h1>
                 </div>
                 <p>Baptist Voice Bible College, is a private school that offers foundational and higher education. It
-                    has been operated and managed by Grace Baptist Church since 2000. The Basic Education Department
-                    utilizes the Accelerated Christian Education system that was started in the early 1970s by dedicated
-                    parents who desired their children reared under the teaching of God’s word – the Bible. A.C.E.
-                    penetrated over 130 countries, where parents desire their children’s lives patterned after the
-                    timeless principles of God’s Word.
+                    has been operated and managed by Grace Baptist Church since 2000.
                 </p>
-                <div class="button">
+                <div class="button1">
                     <a href="">Contact us</a>
                 </div>
             </div>
@@ -161,7 +72,7 @@
                     </div>
                     <img src="assets/img/Home/slider/4.png">
                 </li>
-                <li class="fade"> <!-- ----------------------| -->
+                <li class="fade">
                     <div class="custom-shape-divider-top-1750324223">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                             preserveAspectRatio="none">
@@ -170,9 +81,8 @@
                                 class="shape-fill"></path>
                         </svg>
                     </div>
-                    <img src="assets/img/Home/slider/6.png"> <!-- | duplicate this when adding new slides -->
-                </li> <!-- ----------------------------------|-->
-
+                    <img src="assets/img/Home/slider/6.png">
+                </li>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </ul>
@@ -180,105 +90,53 @@
                 <span class="dot" onclick="currentSlide(0)"></span>
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
-                <!-- When adding new slides img. duplicate this also -->
                 <span class="dot" onclick="currentSlide(3)"></span>
-                <!-- dont forget to change the number inside "currentSlide()"-->
             </div>
         </div>
         <div class="explore">
-            <div class="bgExplore">
-                <h1>EXPLORE OUR ACADEMIC PROGRAMS</h1>
-                <p>BVBC offers a diverse range of academic programs designed to equip students with the knowledge,
-                    skills, and values needed to succeed in today's competitive world.</p>
-            </div>
-            <div class="WrapperExplore">
-                <div class="Eimg ExploreLeft">
-                    <img src="assets/img/Home/unsorted/bbvbcws.JPG" data-modal="modal1" class="openModal">
+            <div class="columnExplore">
+                <div class="txtexplore">
+                    <h1>EXPLORE OUR ACADEMIC PROGRAMS</h1>
+                    <p>BVBC offers a diverse range of academic programs designed to equip students with the knowledge,
+                        skills, and values needed to succeed in today's competitive world.</p>
                 </div>
-                <div class="Eimg ExploreRight">
-                    <img src="assets/img/Home/unsorted/PPHSICLL.jpg" data-modal="modal2" class="openModal">
-                </div>
-            </div>
-            <div class="modal" id="modal1">
-                <div class="modal-content">
-                    <img src="assets/img/Home/unsorted/bbvbcws.JPG" alt="" width="100%">
-                    <h1>UNDERGRADUATE PROGRAMS</h1>
-                    <p>Discover a multitude of bachelor’s degree programs that offer limitless potential for launching
-                        your career.</p>
-                </div>
-            </div>
-            <div class="modal" id="modal2">
-                <div class="modal-content">
-                    <img src="assets/img/Home/unsorted/PPHSICLL.jpg" alt="" width="100%">
-                    <h1>RR-JUNIOR HI-SCHOOL</h1>
-                    <p>Begin your child’s educational journey with our exceptional preschool and basic education
-                        curriculum.</p>
+                <div class="WrapperExplore">
+                    <div class="Excontainer">
+                        <div class="imgcontainer">
+                            <img src="/assets/img/Home/unsorted/bbvbcws.JPG" alt="">
+                        </div>
+                        <h1>UNDERGRADUATE PROGRAMS</h1>
+                        <p>Discover a multitude of bachelor’s degree programs that offer limitless potential for
+                            launching your career.
+                        </p>
+                    </div>
+                    <div class="Excontainer">
+                        <div class="imgcontainer">
+                            <img src="/assets/img/Home/unsorted/PPHSICLL.jpg" alt="">
+                        </div>
+                        <h1>RR-JUNIOR HIgh-SCHOOL</h1>
+                        <p>Begin your child’s educational journey with our exceptional preschool and basic education
+                            curriculum.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="push"></div>
     </main>
 
     <!-- footer -->
-    <footer>
-        <div class="ft_container">
-            <div class="flogo">
-                <div class="textwidget">
-                    <div class="img">
-                        <img src="https://websitedeveloperph.com/temp-BVBC/wp-content/uploads/2025/03/bakcksw-150x150.png"
-                            width="150" height="150">
-                    </div>
-                    <h1>BVBC</h1>
-                </div>
-            </div>
-            <div class="footer_description">
-                <h3 id="footertxt">Description</h3><br>
-                <div class="textwidget">
-                    <p id="footertxt">Baptist Voice Bible College, also known as BVBC,
-                        is a private institution that offers foundational and
-                        higher education since the year 2000, under the supervision
-                        and management of Grace Baptist Church of Lucena City, Inc.
-                    </p>
-                </div>
-            </div>
-            <div class="quick">
-                <h3 id="footertxt">Quick Links</h3><br>
-                <div class="textwidget">
-                    <p>
-                    <ul id="footertxt">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Who We Are</a></li>
-                        <li><a href="">Facilities</a></li>
-                        <li><a href="">Board of Trustees</a></li>
-                        <li><a href="">History</a></li>
-                        <li><a href="">Contact Us</a></li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="contact">
-                <h3 id="footertxt">Contact Info</h3><br>
-                <div class="textwidget">
-                    <p>
-                    <ul>
-                        <li><i class="material-icons" style="color: #fde676;">place</i> Lucena City</li>
-                        <li><i class="material-icons" style="color: #fde676;">local_phone</i> +639 123 456 789</li>
-                        <li><i class="material-icons" style="color: #fde676;">local_post_office</i>
-                            baptistvoicebasiced@gmail.com
-                        <li><i class="material-icons" style="color: #fde676;">local_post_office</i>
-                            baptistcollegephil@gmail.com
-                        </li>
-                        <li><a href="https://www.facebook.com/gracebaptistlucenacity" class="fab fa-facebook">
-                                Facebook</a></li>
-
-                    </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
     <script src="assets/js/sliders.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script>
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+        loadHTML('navigation', '/assets/navigation.html');
+        loadHTML('footer', '/assets/footer.html');
+    </script>
 </body>
 
 </html>
