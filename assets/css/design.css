@@ -17,10 +17,13 @@ body {
     --dark-color: 0, 0, 0;
     --text-color: #000000;    
     --accent-color: #850c0cf1;
-    --highlight-color: #fde676d3;
+    --highlight-color: 253, 230, 118;
+    --gold-color: 255, 224, 0;
     --text-white: 255, 255, 255;
     --shadow-dark: 0 6px 10px black;
+    --shadow-dark2: 3px 4px 10px black;
     --transition: 0.6s ease;
+    --transition2: 0.6s ease-in;
     --shadow-light: 2px 8px 10px rgba(255, 255, 255, 0.055), 0px -5px 35px rgba(201, 22, 22, 0.384);
 }
 
@@ -70,9 +73,9 @@ body {
 
 /*-------------------- Footer --------------------*/
 footer {
-    background-color: var(--footer-background);
+    background-color: var(--text-color);
     padding: 20px;
-    color: var(--footer-text);
+    color: var(--text-color);
 }
 
  

@@ -58,7 +58,7 @@ main {
 }
 
 .introtxt h3 {
-    color: rgba(var(--secondary-color),1);
+    color: rgba(var(--secondary-color), 1);
     font-size: 20px;
     margin-left: 5px;
     text-align: left;
@@ -68,7 +68,7 @@ main {
 }
 
 .introtxt h1 {
-    color: rgba(var(--primary-color),1);
+    color: rgba(var(--primary-color), 1);
     font-size: 140px;
     line-height: 98px;
     font-weight: 1000;
@@ -82,17 +82,21 @@ main {
     font-size: 17px;
     text-align: left;
     margin-left: 3px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: "Poppins", sans-serif;
     text-shadow: var(--shadow-dark);
+    width: 30vw;
 }
 
 .introtxt .button1 a {
-    background: rgba(var(--primary-color),1);
+    background: rgba(var(--primary-color), 1);
     color: rgba(var(--secondary-color));
     padding: 0.75rem 1.5rem;
-    border-radius: 12px;
+    border-radius: 20px;
     font-weight: 600;
     line-height: 70px;
     text-decoration: none;
@@ -101,7 +105,8 @@ main {
 
 .introtxt .button1 a:hover {
     background-color: rgba(var(--secondary-color));
-    color: rgba(var(--primary-color),1);
+    color: rgba(var(--primary-color), 1);
+    font-size: 20px;
 }
 
 
@@ -232,16 +237,16 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: rgba(var(--primary-color));
-    height: 120vh;
+    height: 100vh;
     gap: 20px;
-    padding-bottom: 15%;
 }
 
 .columnExplore {
     flex-direction: column;
     gap: 40px;
-    display: inline-flex;
+    display: flex;
 }
 
 .WrapperExplore {
@@ -249,6 +254,7 @@ main {
     justify-content: center;
     gap: 10%;
     flex-wrap: wrap;
+    padding: 3px 3px 6rem;
 }
 
 .txtexplore {
@@ -256,12 +262,33 @@ main {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    font-size: 30px;
+}
+
+.txtexplore p {
+    font-size: 20px;
+    color: rgba(var(--secondary-color));
+}
+
+.txtexplore h1 {
+    color: rgba(var(--highlight-color));
 }
 
 .Excontainer {
-    width: 30rem;
+    width: 24vw;
     height: 40rem;
-    box-shadow: var(--shadow-dark);
+    background-color: rgba(var(--secondary-color), 1);
+    transition: 0.5s ease-out;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+.Excontainer:hover {
+    box-shadow: 10px 10px 0px 0px rgba(var(--highlight-color), 0.75);
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(var(--highlight-color), 0.75);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(var(--highlight-color), 0.75);
 }
 
 .imgcontainer {
@@ -277,4 +304,18 @@ main {
     left: 0;
     transform: translate(-20%, -10%);
     width: 640px;
+}
+
+.txtExContainer {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    padding: 5%;
+    color: rgba(var(--primary-color));
+}
+
+.txtExContainer p {
+    color: black;
 }
